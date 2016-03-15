@@ -11,7 +11,7 @@ function initialize() {
   };
   var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
   var marker=new google.maps.Marker({
-  position:myCenter,
+  position:new google.maps.LatLng(37.875690, -122.258745),
   });
 marker.setMap(map);
 }
