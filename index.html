@@ -5,6 +5,15 @@
   <script src="https://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
 </head>
 <body>
+<form action="demo_form.asp">
+  Building Name: <input type="text" name="Location Name" value=""><br>
+  Lon: <input type="text" name="longitude" value=""><br>
+  Lat: <input type="text" name="latitude" value=""><br>
+  <input type="submit" value="Submit">
+</form>
+
+<p>Click the "Submit" button and the form-data will be sent to google maps api".</p>
+
   <div id="map" style="height: 600px; width: 750px;">
 </div>
 <script type="text/javascript">
