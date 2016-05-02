@@ -5,7 +5,7 @@
   <script src="https://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
 </head>
 <body>
-  <div id="map" style="height: 800px; width: 1000px;">
+  <div id="map" style="height: 600px; width: 750px;">
 </div>
 <script type="text/javascript">
     var locations = [
@@ -20,7 +20,7 @@
     ];
 
     var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 17,
+      zoom: 16,
       center: new google.maps.LatLng(37.8719549, -122.2593536),
       mapTypeId: google.maps.MapTypeId.ROADMAP
     });
