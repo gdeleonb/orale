@@ -1,26 +1,36 @@
 <html>
-<head>
-<header><title>Orale</title></header>
-<script src="https://maps.googleapis.com/maps/api/js"></script>
-<script>
-function initialize() {
-  var mapProp = {
-    center:new google.maps.LatLng(37.875690, -122.258745),
-    zoom:16,
-    mapTypeId:google.maps.MapTypeId.ROADMAP
-  };
-  var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-  var marker=new google.maps.Marker({
-  position:new google.maps.LatLng(37.875690, -122.258745),
-  });
-marker.setMap(map);
-}
-google.maps.event.addDomListener(window, 'load', initialize);
-</script>
-</head>
+  <head>
 
-<body>
-<div id="googleMap" style="width:500px;height:380px;"></div>
-</body>
+    <header>
+      <title>Orale</title>
+    </header>
+
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+
+    <script>
+      function initialize() {
+        var mapProp = {
+          center:new google.maps.LatLng(37.875690, -122.258745),
+          zoom:16,
+          mapTypeId:google.maps.MapTypeId.ROADMAP
+        };
+        var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+        var marker=new google.maps.Marker({
+          position:new google.maps.LatLng(37.875690, -122.258745),
+        });
+        marker.setMap(map);
+        var infowindow = new google.maps.InfoWindow({
+          content:"Soda Hall"
+        });
+        infowindow.open(map,marker);
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+      </script>
+
+    </head>
+
+  <body>
+    <div id="googleMap" style="width:500px;height:380px;"></div>
+  </body>
 
 </html>
